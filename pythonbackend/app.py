@@ -17,5 +17,5 @@ def getRedditClient():
     submission = reddit.submission(id=redditID)
     return render_template('search.html', titl=submission.title, auth=submission.author, up=submission.ups, dow=submission.downs)
 
-
-    #hello
+if __name__== "__main__":
+    app.run()

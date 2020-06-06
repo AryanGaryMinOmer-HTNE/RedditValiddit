@@ -1,0 +1,40 @@
+@font-face {
+    font-family: caviar;
+    src: url('elems/corbert.ttf');
+}
+
+#main {
+    position: relative;
+    left: 10%;
+    top: -35%;
+    margin-top: 30%;
+    font-size: 15px;
+    height: 40px;
+    width: 700px;
+    font-family: caviar;
+}
+
+body {
+    background-color: #FF7F26;
+}
+
+.first-sec {
+    background-color: lightgrey;
+    width: 900px;
+    height: 400px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.search {
+    width:700px;
+    height:37px;
+    text-align: center;
+    margin-top: -0.6%;
+    margin-left: 10%;
+    background-color: blue;
+    font-size:18px;
+    border: none; 
+    font-family: caviar;
+}
