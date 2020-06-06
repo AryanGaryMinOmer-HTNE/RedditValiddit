@@ -2,8 +2,8 @@ import praw
 
 def getRedditClient():
     redditLink = "https://www.reddit.com/r/Jokes/comments/gxmqa6/mens_help_line_letter_of_the_month/"
-    redditPost = Submission.id_from_url(redditLink)
-    print(Submission.id_from_url(redditLink))
+    redditPost = praw.models.Submission.id_from_url(redditLink)
+    print(praw.models.Submission.id_from_url(redditLink))
     
     reddit = praw.Reddit(client_id="MuFZGhJium139Q",
                         client_secret="JCGwE1FgXThG1DYlHZnEcwj1WN4",
@@ -26,7 +26,7 @@ def getRedditClient():
     print(submission.score)
     downvoteNum = (1-submission.upvote_ratio)
     print(round(downvoteNum*submission.score))
-    url = submission.url if submission.url != redditLink
+    if(submission.url != redditLink): url = submission.url
     print(url)
     print(submission.num_comments)
     #only gets the top level comments - ones without parent comments, the starter of the comment chain.
