@@ -6,7 +6,7 @@ def getRedditClient():
     print(Submission.id_from_url(redditLink))
     
     reddit = praw.Reddit(client_id="MuFZGhJium139Q",
-                     client_secret="JCGwE1FgXThG1DYlHZnEcwj1WN4",
+                        client_secret="JCGwE1FgXThG1DYlHZnEcwj1WN4",
                         user_agent="validdit page checker")
     submission = reddit.submission(id=redditPost)
     print(submission.title)
