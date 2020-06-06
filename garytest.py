@@ -37,28 +37,32 @@ for i in range(len(all_comments)):
     end_of_link = 0
     pointer = 0
 
-    # try:
-    #     cur_comment.index("<a href", pointer)
-    # except ValueError:
-    #     start_of_link = 0
-    #     end_of_link = 0
-    # else:
-    #     start_of_link = cur_comment.index("<a href=\"", pointer) + 9
-    #     end_of_link = cur_comment.index("\">", start_of_link)
-    #     print(cur_comment[start_of_link:end_of_link])
-    #     print(i)
-    #     print()
+    try:
+        cur_comment.index("<a href", pointer)
+    except ValueError:
+        start_of_link = 0
+        end_of_link = 0
+    else:
+        start_of_link = cur_comment.index("<a href=\"", pointer) + 9
+        end_of_link = cur_comment.index("\">", start_of_link)
+        print(start_of_link)
+        print(end_of_link)
+        print(cur_comment[start_of_link:end_of_link])
+        print(i)
+        print()
 
-    while pointer < len(cur_comment):
-        try:
-            cur_comment.index("<a href", pointer)
-        except ValueError:
-            start_of_link = 0
-            end_of_link = 0
-        else:
-            start_of_link = cur_comment.index("<a href=\"", pointer) + 9
-            end_of_link = cur_comment.index("\">", pointer) - 1
-            print(cur_comment[start_of_link:end_of_link])
-            pointer = end_of_link
-            # for i in range(len(news_sources)):
-            #     if(cur_comment.index)
+
+# more than 1 link on a comment adaptation
+    # while pointer < len(cur_comment):
+    #     try:
+    #         cur_comment.index("<a href", pointer)
+    #     except ValueError:
+    #         start_of_link = 0
+    #         end_of_link = 0
+    #     else:
+    #         start_of_link = cur_comment.index("<a href=\"", pointer) + 9
+    #         end_of_link = cur_comment.index("\">", pointer)
+    #         print(cur_comment[start_of_link:end_of_link])
+    #         pointer = len(cur_comment)
+    #         # for i in range(len(news_sources)):
+    #         #     if(cur_comment.index)
