@@ -18,28 +18,23 @@ news_sources = ["cnn.com", "nytimes.com", "huffpost.com", "foxnews.com", "usatod
 
 comments_with_links = []
 
-# for i in range(len(all_comments)):
-#     a = i
-#     cur_comment = vars(all_comments[i])["body_html"]
-#     start_of_link = 0 
-#     end_of_link = 0
-#     pointer = 0
+for i in range(len(all_comments)):
+    a = i
+    cur_comment = vars(all_comments[i])["body_html"]
+    start_of_link = 0 
+    end_of_link = 0
+    pointer = 0
     
-#     while pointer < len(cur_comment):
-#         try:
-#             cur_comment.index("<a href", pointer)
-#         except ValueError:
-#             start_of_link = 0
-#             end_of_link = 0
-#         else:
-#             start_of_link = cur_comment.index("<a href", pointer) + 9
-#             end_of_link = cur_comment.index("\">", pointer) - 1
-#             print(cur_comment[start_of_link:end_of_link])
-#             pointer = end_of_link
-#             # for i in range(len(news_sources)):
-#             #     if(cur_comment.index)
-        
-
-
-
-print("hello")
+    while pointer < len(cur_comment):
+        try:
+            cur_comment.index("<a href", pointer)
+        except ValueError:
+            start_of_link = 0
+            end_of_link = 0
+        else:
+            start_of_link = cur_comment.index("<a href", pointer) + 9
+            end_of_link = cur_comment.index("\">", pointer) - 1
+            print(cur_comment[start_of_link:end_of_link])
+            pointer = end_of_link
+            # for i in range(len(news_sources)):
+            #     if(cur_comment.index)
