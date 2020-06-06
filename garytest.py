@@ -32,7 +32,7 @@ for i in range(len(all_comments)):
             start_of_link = 0
             end_of_link = 0
         else:
-            start_of_link = cur_comment.index("<a href", pointer) + 9
+            start_of_link = cur_comment.index("<a href=\"", pointer) + 9
             end_of_link = cur_comment.index("\">", pointer) - 1
             print(cur_comment[start_of_link:end_of_link])
             pointer = end_of_link
