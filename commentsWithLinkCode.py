@@ -16,9 +16,12 @@ news_sources = ["cnn.com", "nytimes.com", "huffpost.com", "foxnews.com", "usatod
                 "huffingtonpost.ca", "nationalpost.com", "torontosun.com", "financialpost.com", "vancouversun.com",
                 "macleans.ca", "montrealgazette.com", "citynews.ca", "metronews.ca", "calgaryherald.com",
                 "reddit.com"]
+keywords = ["fake", ""]
 
 comments_with_links = [] # holds the comments and links
+comments_with_keywords = []
 
+# loop going through every comment
 for i in range(len(all_comments)):
     try:
         cur_comment = vars(all_comments[i])["body_html"]
@@ -31,6 +34,7 @@ for i in range(len(all_comments)):
     end_of_link = 0
     pointer = 0
 
+    # try/catch for locating comments with article/reddit links
     try:
         cur_comment.index("<a href", pointer)
     except ValueError:
@@ -49,5 +53,6 @@ for i in range(len(all_comments)):
                 clean_body = clean_body.replace('\n', ' ')
                 
                 comments_with_links.append([clean_body, cur_comment[start_of_link:end_of_link]])
+
 
         
