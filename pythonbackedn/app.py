@@ -16,3 +16,6 @@ def getRedditClient():
                         user_agent="validdit page checker")
     submission = reddit.submission(id=redditID)
     return render_template('search.html', titl=submission.title, auth=submission.author, up=submission.ups, dow=submission.downs)
+
+
+    #hello
