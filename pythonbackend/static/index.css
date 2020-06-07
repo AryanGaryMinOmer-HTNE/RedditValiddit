@@ -58,6 +58,7 @@ main{
 }
 .button h3{
     margin:0;
+    color: black;
     text-shadow: black;
 }
 .button:hover{

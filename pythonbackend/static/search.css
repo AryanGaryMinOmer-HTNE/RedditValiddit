@@ -20,21 +20,25 @@ body {
 }
 
 .info div{
-    background-color: #ffdbbd;
-    border: 5px solid gray;
+    background-color: #fcc392;
+    border: 5px solid #495867;
     border-radius: 30px;
     flex: 1 0;
     -webkit-flex: 1 0;
     margin: 20px;
-}
-.info div.com{
-    background-color: #fdcda5;
 }
 .info p{
     margin: 10px;
     font-family: corbert;
     font-size: 28px;
 }
-.info em{
-
+.info div.com{
+    background-color: #fcb982;
+}
+.info div.com .body{
+    font-size: 18px;
+}
+.info div.com p a{
+    word-wrap: break-word;
+    font-size: 20px;
 }

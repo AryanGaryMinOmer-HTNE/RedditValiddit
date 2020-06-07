@@ -24,30 +24,41 @@
     </div>
     <div class="info">
         <div class="box submission">
+            <h1>Submission Information</h1>
             <p><strong>Score:</strong> {{score}}</p>
             <p><strong>Upvote Ratio:</strong> {{ratio}}</p>
-            <p><strong>Embedded URL:</strong> {{url}}</p>
+            <p><strong>Embedded URL:</strong> <a href="{% if url != 'No Linked URL' %}{{url}}{% else %}javascript:void(0){% endif %}">{{url}}</a></p>
         </div>
         <div class="box author">
+            <h1>Post Author Information</h1>
             <p><strong>Author:</strong> {{auth}}</p>
             <p><strong>Author Comment Karma:</strong> {{authCommentKarm}}</p>
             <p><strong>Author Link Karma:</strong> {{authLinkKarm}}</p>
             <p><strong>Is the user verified?:</strong> {{authVerified}}</p>
         </div>
         <div class="box comments">
+            <h1>Post Engagement</h1>
             <p><strong>Comment amount:</strong> {{comNum}}</p>
-            {% for comment in comWithLink %}
-                <div class="com">
-                    <p>{{comment[0]}}</p>
-                    <p>{{comment[2]}}</p>
-                </div>
-            {% endfor %}
-            {% for comment in comWithKey %}
-                <div class="com">
-                    <p>{{comment[0]}}</p>
-                    <p>{{comment[2]}}</p>
-                </div>
-            {% endfor %}
+            {% if comWithLink|length > 0 %}
+            <h1>Comments With Links</h1>
+                {% for comment in comWithLink %}
+                    <div class="com">
+                        <p class="body"><em>{{comment[0]}}</em></p>
+                        <p><a href="{{comment[1]}}">{{comment[1]}}</a></p>
+                        <p>Score: {{comment[2]}}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% if comWithKey|length > 0 %}
+            <h1>Comments With Keywords</h1>
+                {% for comment in comWithKey %}
+                    <div class="com">
+                        <p class="body"><em>{{comment[0]}}</em></p>
+                        <p class="body"><em>{{comment[1]}}</em></p>
+                        <p>Score: {{comment[2]}}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
     <nav>
