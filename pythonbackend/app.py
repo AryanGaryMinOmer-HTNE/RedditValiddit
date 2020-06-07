@@ -75,7 +75,7 @@ def getRedditClient():
                     clean_body = clean_body.replace("(" + cur_comment[start_of_link:end_of_link] + ")", "")
                     clean_body = clean_body.replace('\n', ' ')
                     
-                    for k in range(comments_with_links):
+                    for k in range(len(comments_with_links)):
                         if(comments_with_links[k][0] == clean_body):
                             link_dup = True
 
@@ -94,17 +94,19 @@ def getRedditClient():
                 end_of_word = start_of_word + len(keywords[j])
 
                 clean_body = vars(all_comments[i])["body"]
-                clean_body = clean_body.translate({ord('['): None})
-                clean_body = clean_body.translate({ord(']'): None})
                 clean_body = clean_body.replace("(" + cur_comment[start_of_link:end_of_link] + ")", "")
-                clean_body = clean_body.replace('\n', ' ')
+                for k in range(len(keywords)):
+                    if(keywords[k] in clean_body):
+                        clean_body = clean_body.translate({ord('['): None})
+                        clean_body = clean_body.translate({ord(']'): None})
+                        clean_body = clean_body.replace('\n', ' ')
 
-                for k in range(comments_with_keywords):
-                    if(comments_with_keywords[k][0] == clean_body):
-                        keyword_dup = True
+                        for k in range(len(comments_with_keywords)):
+                            if(comments_with_keywords[k][0] == clean_body):
+                                keyword_dup = True
 
-                if(keyword_dup == False):
-                    comments_with_keywords.append([clean_body, keywords[j], vars(all_comments[i])["score"]])
+                        if(keyword_dup == False):
+                            comments_with_keywords.append([clean_body, keywords[j], vars(all_comments[i])["score"]])
 
     author = submission.author
     url = "No Linked URL"
