@@ -1,1 +1,1 @@
-# Validdit - an unofficial validity checker for reddit.
+# Validdit - an unofficial validity checker for Reddit.
