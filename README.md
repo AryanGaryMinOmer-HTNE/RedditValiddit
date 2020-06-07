@@ -1,6 +1,6 @@
 <p align=center>
     <img src="misc/logoandname.png" alt="Validdit Logo" width=450 height=300>
-    <h3 align=center>an unofficial validity checker for Reddit.</h3>
+    <h3 align=center>an unofficial article validity checker for Reddit.</h3>
     <h4 align=center>created by Omer A, Aryan G, Min K, and Gary Q
 </p>
 
