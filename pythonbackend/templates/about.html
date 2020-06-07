@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../static/fonts.css"/>
+  <link rel="stylesheet" type="text/css" href="../static/about.css"/>
+  <link rel="stylesheet" type="text/css" href="../static/navbar.css"/>
+  <link rel="stylesheet" type="text/css" href="../static/banner.css"/>
+</head>
+
+<body>
+  <div class="banner">
+    <h> Validdit </h>
+    <div class="logo">
+      <img src="../static/elems/img/multicolorCircle.png" alt="Third circle next to logo on the left" width="30" height="30"/>
+      <img src="../static/elems/img/multicolorCircle.png" alt="Second circle next to logo on the left" width="40" height="40"/>
+      <img src="../static/elems/img/multicolorCircle.png" alt="First circle next to logo on the left" width="50" height="50"/>
+      <img src="../static/elems/img/logo.png" alt="Website logo" width="80" height="80"/>
+      <img src="../static/elems/img/multicolorCircle.png" alt="Circle next to logo on the right" width="50" height="50"/>
+      <img src="../static/elems/img/multicolorCircle.png" alt="Circle next to logo on the right" width="40" height="40"/>
+      <img src="../static/elems/img/multicolorCircle.png" alt="Circle next to logo on the right" width="30" height="30"/>
+    </div>
+  </div>
+  <div class="lightblue">
+    <div class="orange">
+      <h1 class="header">ABOUT OUR STARTUP</h1>
+      <div class="aboutus">
+        <img class="descript" src="../static/elems/img/whoarewe.png" alt="question mark with lines">
+        <div class="text">
+          <h3>Who are we?</h3>
+          <h4>
+            Fake news is all around us, regardless of where we go. <span>Validdit</span> is an organization that is focused on helping users of Reddit find 
+            valid information. Take the link, input it into our site, and <span>Validdit</span> will compile the information and show the user how valid it
+            may be.
+          </h4>
+        </div>
+        <img class="close" src="../static/elems/img/closebrack.png" alt="a closed bracket">
+      </div>
+      <div class="howitworks">
+        <img class="close" src="../static/elems/img/openbrack.png" alt="a closed bracket">
+        <div class="text">
+          <h3>How Does our Algorithm Work?</h3>
+          <h4>
+            Using a Python Reddit API called PRAW, we find the:
+            <ol>
+              <li>The post's score and the upvote ratio - the higher, the better,
+              <li>The activeness of the post in the comments,
+              <li>The Author's past activities: their comment/post score and their credibility,
+              <li>Keywords in the comment section - the user reception of the post.
+            </ol>
+          </h4>
+        </div>
+        <img class="descript" src="../static/elems/img/howitworks.png" alt="question mark with lines">
+      </div>
+    </div>
+  </div>
+  <nav>
+    <a class="open" onclick="openNav()">&#9776;</a>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="footer" href="https://github.com/validdit">Github Repo</a>
+    </div>
+  </nav>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+</body>
+</html>

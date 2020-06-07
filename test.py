@@ -17,13 +17,13 @@ def getRedditClient(redditLink):
     print(author.has_verified_email)
 
     subreddit = submission.subreddit
+    print(dir(subreddit))
     print("r/"+subreddit.display_name)
     print(subreddit.quarantine)
     
     print(submission.title)
     print(submission.score)
-    downvoteNum = (1-submission.upvote_ratio)
-    print(round(downvoteNum*submission.score))
+    print(submission.upvote_ratio)
     url = ""
     if(submission.url != redditLink): url = submission.url
     print(url)
@@ -32,5 +32,5 @@ def getRedditClient(redditLink):
     #for comment in submission.comments:
     #   print(comment.body)
 
-redditLink = "https://www.reddit.com/r/Jokes/comments/gxmqa6/mens_help_line_letter_of_the_month/"
+redditLink = "https://www.reddit.com/r/ValidditTesting/comments/gy0xvy/wow_karens/"
 getRedditClient(redditLink)

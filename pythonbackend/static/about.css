@@ -1,0 +1,56 @@
+body {
+    background-color:black;
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+}
+
+.lightblue{
+    background-color: #ADD9E6;
+    position: absolute; 
+    left: 30px; 
+    top: 120px;
+    width: 95%;
+    height: auto;
+    margin-bottom: 30px;
+}
+.orange{
+    background-color: #FF7F26;
+    margin: 30px;
+    padding: 10px;
+    width: auto;
+    height: 92%;
+}
+.orange .header{
+    position: relative;
+    text-align:center;
+    display: block;
+    color: black;
+    margin: 5px;
+}
+
+.aboutus, .howitworks{
+    position: relative;
+    display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 40px 0px;
+    text-align:center;
+    overflow-wrap: break-word;
+}
+.orange .descript{
+    position: relative;
+    flex: 2 1;
+    -webkit-flex: 2 1;
+}
+.orange .text{
+    display: block;
+    flex: 3 0;
+    -webkit-flex: 3 0;
+}
+.orange .close{
+    position: relative;
+    flex: 0.30 1;
+    -webkit-flex: 0.30 1;
+}

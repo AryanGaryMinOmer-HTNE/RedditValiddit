@@ -1,0 +1,42 @@
+@font-face {
+    font-family: montserrat;
+    src: url('elems/fonts/montserrat.otf');
+} 
+h {
+    font-family: montserrat;
+    font-size: 68px;
+}
+
+@font-face {
+    font-family: corbert;
+    src: url("elems/fonts/corbert.ttf");
+} 
+h1 {
+    font-family: corbert;
+    font-size: 50px;
+}
+
+@font-face {
+    font-family: cavier;
+    src: url("elems/fonts/cavier.ttf");
+} 
+h3 {
+    font-family: cavier;
+    font-size: 40px;
+}
+
+@font-face {
+    font-family: minimal;
+    src: url('elems/fonts/minimal.otf');
+} 
+h4 {
+    font-family: minimal;
+    font-size: 26px;
+}
+h4 span{
+    font-size: 20px;
+    font-family: montserrat;
+    color: orangered;
+    font-weight: bold;
+}
+

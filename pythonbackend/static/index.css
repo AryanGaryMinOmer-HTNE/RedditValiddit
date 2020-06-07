@@ -1,0 +1,72 @@
+body {
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+    background-image: url("elems/img/indexBackground.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+.background{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: auto;
+}
+
+.text{
+    position: relative;
+    left: -10px;
+    text-align: center;
+    background-color: #ffffff33;
+    width: 100%;
+    padding: 10px;
+}
+.text h{
+    position: relative;
+    color: black;
+}
+.text span{
+    color: orangered;
+}
+
+.button{
+    background-color: #ffd6c7;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    top: 100px;
+    width: 400px;
+    height: 150px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 100px;
+    border: 0px solid;
+    border-radius: 50px;
+    box-shadow: 0 14px 18px 0 #00000033, 0 16px 30px 0 #00000030;
+    transition: 0.4s;
+}
+.button h3{
+    margin:0;
+    text-shadow: black;
+}
+.button:hover{
+    box-shadow: 0 14px 18px 0 #bebebe21, 0 16px 30px 0 #bebebe21;
+    background-color: #f3ad94;
+    cursor: pointer;
+}
+
+.footer{
+    position:relative;
+    width:auto;
+    height:100px;
+}
