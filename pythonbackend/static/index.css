@@ -48,6 +48,7 @@ main{
     width: 400px;
     height: 150px;
     text-align: center;
+    text-decoration: none;
     margin: auto;
     margin-bottom: 100px;
     border: 0px solid;
@@ -65,7 +66,7 @@ main{
     cursor: pointer;
 }
 
-.footer{
+div.footer{
     position:relative;
     width:auto;
     height:100px;
