@@ -15,26 +15,35 @@
 }
 
 body {
-    background-color: #FF7F26;
+    background-image: url("elems/homeBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .first-sec {
-    background-color: lightgrey;
+    background-color: rgba(219, 190, 190, 0.555);
     width: 900px;
     height: 400px;
     position: absolute;
     top: 20%;
     left: 20%;
+    border-radius:8px;
 }
 
 .search {
+    color: black;
     width:700px;
     height:37px;
     text-align: center;
     margin-top: -0.6%;
     margin-left: 10%;
-    background-color: blue;
-    font-size:18px;
+    background-color: orangered;
+    font-size:13px;
+    font-weight:900;
     border: none; 
     font-family: caviar;
 }
