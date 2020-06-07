@@ -1,2 +1,0 @@
-{{url_for('static',filename='input.css')}}
-

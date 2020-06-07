@@ -1,0 +1,33 @@
+body {
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+    background-image: url("elems/img/indexBackground.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+.info{
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width:100%;
+    height:auto;
+}
+
+.info div{
+    background-color: #ffdbbd;
+    border: 5px solid gray;
+    border-radius: 30px;
+    font-family: caviar;
+    flex: 1 0;
+    -webkit-flex: 1 0;
+    margin: 20px;
+}
+h1{
+    font-size: 14px;
+}
