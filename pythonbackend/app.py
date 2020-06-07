@@ -110,6 +110,7 @@ def getRedditClient():
     url = "No Linked URL"
     if(submission.url != redditlink): url = submission.url
 
+    # returns info that will be displayed to user
     return render_template('search.html', 
                             titl=submission.title, 
                             auth=author, 
