@@ -73,7 +73,8 @@ def getRedditClient():
                     clean_body = clean_body.replace("(" + cur_comment[start_of_link:end_of_link] + ")", "")
                     clean_body = clean_body.replace('\n', ' ')
                     
-                    comments_with_links.append([clean_body, cur_comment[start_of_link:end_of_link], vars(all_comments[i])["score"]])
+                    if([clean_body, cur_comment[start_of_link:end_of_link], vars(all_comments[i])["score"]] not in comments_with_links):
+                        comments_with_links.append([clean_body, cur_comment[start_of_link:end_of_link], vars(all_comments[i])["score"]])
         
         # try/catch for locating comments containing key words
         for j in range(len(keywords)):
@@ -91,7 +92,8 @@ def getRedditClient():
                 clean_body = clean_body.translate({ord(']'): None})
                 clean_body = clean_body.replace("(" + cur_comment[start_of_link:end_of_link] + ")", "")
                 clean_body = clean_body.replace('\n', ' ')
-                comments_with_keywords.append([clean_body, keywords[j], vars(all_comments[i])["score"]])
+                if([clean_body, keywords[j], vars(all_comments[i])["score"]] not in comments_with_keywords):
+                    comments_with_keywords.append([clean_body, keywords[j], vars(all_comments[i])["score"]])
 
     author = submission.author
     url = "No Linked URL"

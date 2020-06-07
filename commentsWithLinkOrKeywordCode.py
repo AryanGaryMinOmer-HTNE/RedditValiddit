@@ -18,8 +18,8 @@ news_sources = ["cnn.com", "nytimes.com", "huffpost.com", "foxnews.com", "usatod
                 "reddit.com"]
 keywords = ["fake", "accurate", "biased", "radical", "politic", "made-up", "corrupt", "racist"]
 
-comments_with_links = [] # holds the comments, links, start and end index of link, and karma
-comments_with_keywords = [] # holds the comments, keyword found, start and end index of link, and karma
+comments_with_links = [] # holds the comments, links, start and end index of link, and points
+comments_with_keywords = [] # holds the comments, keyword found, start and end index of link, and points
 
 # loop going through every comment
 for i in range(len(all_comments)):
