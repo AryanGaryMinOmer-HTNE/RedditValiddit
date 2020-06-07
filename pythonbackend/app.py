@@ -49,6 +49,8 @@ def getRedditClient():
         else:
             cur_comment = vars(all_comments[i])["body_html"]
 
+        link_dup = False
+        keyword_dup = False
         start_of_link = 0 
         end_of_link = 0
         start_of_word = 0
@@ -73,7 +75,11 @@ def getRedditClient():
                     clean_body = clean_body.replace("(" + cur_comment[start_of_link:end_of_link] + ")", "")
                     clean_body = clean_body.replace('\n', ' ')
                     
-                    if([clean_body, cur_comment[start_of_link:end_of_link], vars(all_comments[i])["score"]] not in comments_with_links):
+                    for k in range(comments_with_links):
+                        if(comments_with_links[k][0] == clean_body):
+                            link_dup = True
+
+                    if(link_dup == False):
                         comments_with_links.append([clean_body, cur_comment[start_of_link:end_of_link], vars(all_comments[i])["score"]])
         
         # try/catch for locating comments containing key words
@@ -92,7 +98,12 @@ def getRedditClient():
                 clean_body = clean_body.translate({ord(']'): None})
                 clean_body = clean_body.replace("(" + cur_comment[start_of_link:end_of_link] + ")", "")
                 clean_body = clean_body.replace('\n', ' ')
-                if([clean_body, keywords[j], vars(all_comments[i])["score"]] not in comments_with_keywords):
+
+                for k in range(comments_with_keywords):
+                    if(comments_with_keywords[k][0] == clean_body):
+                        keyword_dup = True
+
+                if(keyword_dup == False):
                     comments_with_keywords.append([clean_body, keywords[j], vars(all_comments[i])["score"]])
 
     author = submission.author
