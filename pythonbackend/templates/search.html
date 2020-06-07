@@ -24,61 +24,39 @@
     </div>
     <div class="info">
         <div class="box submission">
-            <h1>Title: {{titl}}</h1>
-            <h1>Score: {{score}}</h1>
-            <h1>Upvote Ratio: {{ratio}}</h1>
-            <h1>Embedded URL: {{url}}</h1>
+            <p><strong>Score:</strong> {{score}}</p>
+            <p><strong>Upvote Ratio:</strong> {{ratio}}</p>
+            <p><strong>Embedded URL:</strong> {{url}}</p>
         </div>
         <div class="box author">
-            <h1>Author: {{auth}}</h1>
-            <h1>Author Comment Karma: {{authCommentKarm}}</h1>
-            <h1>Author Link Karma: {{authLinkKarm}}</h1>
-            <h1>Is the user verified?: {{comWithKey}}</h1>
+            <p><strong>Author:</strong> {{auth}}</p>
+            <p><strong>Author Comment Karma:</strong> {{authCommentKarm}}</p>
+            <p><strong>Author Link Karma:</strong> {{authLinkKarm}}</p>
+            <p><strong>Is the user verified?:</strong> {{authVerified}}</p>
         </div>
-        <div class="box comment">
-            <h1>Comment amount: {{comNum}}</h1>
+        <div class="box comments">
+            <p><strong>Comment amount:</strong> {{comNum}}</p>
             {% for comment in comWithLink %}
-                <div class="links">
-                    <h1>{{comment[0]}}</h1>
-                    <h1>{{comment[1]}}</h1>
-                    <h1>{{comment[2]}}</h1>
+                <div class="com">
+                    <p>{{comment[0]}}</p>
+                    <p>{{comment[2]}}</p>
                 </div>
             {% endfor %}
             {% for comment in comWithKey %}
-                <div class="keyword">
-                    <h1>{{comment[0]}}</h1>
-                    <h1>{{comment[1]}}</h1>
-                    <h1>{{comment[2]}}</h1>
+                <div class="com">
+                    <p>{{comment[0]}}</p>
+                    <p>{{comment[2]}}</p>
                 </div>
             {% endfor %}
         </div>
     </div>
-    <!--
-    <h1>
-        <div style = "position: absolute; left: 100px; top: 150px;">
-            Name: <br>
-            Title: <br>
-            Author:
-        </div>
-        <div style = "position: absolute; left: 100px; top: 430px;">
-            Information About the Author:
-        </div>
-        <div style = "position: absolute; left: 100px; top: 730px;">
-            Upvote/Downvote <br> ratio
-        </div>
-        <div style = "position: absolute; left: 100px; top: 1050px;">
-            Comments Regarding Validity:
-        </div>
-        <div style = "position: absolute; left: 100px; top: 1450px;">
-            Relevent Links:
-        </div>
-    </h1>-->
     <nav>
         <a class="open" onclick="openNav()">&#9776;</a>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="/">Home</a>
             <a href="/about">About</a>
+            <a class="footer" href="https://github.com/validdit">Github Repo</a>
         </div>
     </nav>
     <script>
@@ -92,21 +70,6 @@
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>
-    </body>
+</body>
 
 </html>
-    <!--
-<html>
-    <head>
-        <title>Work</title>
-    </head>
-    <body>
-        <h1>Title: {{titl}}</h1>
-        <h1>Author: {{auth}}</h1>
-        <h1>Score: {{score}}</h1>
-        <h1>Upvote Ratio: {{ratio}}</h1>
-        <h1>Comment amount: {{comNum}}</h1>
-        <h1>list?: {{comWithLink}}</h1>
-    </body>
-</html> 
--->

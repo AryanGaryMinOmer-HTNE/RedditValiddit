@@ -1,21 +1,5 @@
-@font-face {
-    font-family: caviar;
-    src: url('elems/corbert.ttf');
-}
-
-#main {
-    position: relative;
-    left: 10%;
-    top: -35%;
-    margin-top: 30%;
-    font-size: 15px;
-    height: 40px;
-    width: 700px;
-    font-family: caviar;
-}
-
 body {
-    background-image: url("elems/homeBackground.jpg");
+    background-image: url("elems/img/indexBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -23,34 +7,143 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
 }
+a{
+    position: absolute; 
+    text-align: none;
+    text-decoration: none;
+    right: 60px; 
+    top: 10px; 
+    color: orangered;
+    transition: opacity 0.5s;
+}
 
 .first-sec {
     background-color:lightgrey;
     width: 900px;
     height: 400px;
-    position: absolute;
-    top: 20%;
-    left: 20%;
+    position: relative;
+    top: 100px;
+    margin:auto;
+    text-align:center;
+    display: block;
     border: 3px solid white;
     border-radius:12px;
+    transition: height 0.5s;
+}
+.first-sec .logo{
+    position: relative;
+    text-align: center;
+    top: 30px;
+}
+.first-sec .logo img{
+    position: relative;
+    margin: 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.first-sec .logo img#_1{
+    width: 60px;
+    height: 60px;
+}
+.first-sec .logo img#_2{
+    width: 80px;
+    height: 80px;
+}
+.first-sec .logo img#_3{
+    width: 100px;
+    height: 100px;
+}
+.first-sec .logo img#_4{
+    width: 160px;
+    height: 160px;
+}
+
+.options{
+    position: relative;
+    margin:auto;
+    width:100%;
+    height:200px;
+}
+
+#main {
+    position: relative;
+    top: 80px;
+    font-size: 15px;
+    height: 40px;
+    width:700px;
+    font-family: corbert;
 }
 
 .search {
+    background-color: orangered;
     color: black;
+    position: relative;
+    top: 80px;
     width:700px;
     height:37px;
     text-align: center;
-    margin-top: -0.6%;
-    margin-left: 10%;
-    background-color: orangered;
     font-size:13px;
     font-weight:900;
     border: none; 
-    font-family: caviar;
-    transition-duration: 0.5s;
+    font-family: corbert;
+    transition: background-color 0.5s;
+    transition: color 0.5s;
 }
-
 .search:hover{
     background-color: #f86f30;
     color: white;
+}
+
+.ico-mglass {
+    position:relative;
+    display:inline-block;
+    background: #fff;
+    border-radius: 30px;
+    height: 6px;
+    width: 6px;
+    border: 2px solid #888;
+}
+.ico-mglass:after {
+    content: "";
+    height: 2px;
+    width: 6px;
+    background: #888;
+    position:absolute;
+    top:7px;
+    left:5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+ 
+
+@media only screen and (max-width:900px){
+    .first-sec {
+        width: 90vw;
+        height: 300px;
+    }
+    .first-sec .logo img#_1{
+        width: 30px;
+        height: 30px;
+    }
+    .first-sec .logo img#_2{
+        width: 40px;
+        height: 40px;
+    }
+    .first-sec .logo img#_3{
+        width: 50px;
+        height: 50px;
+    }
+    .first-sec .logo img#_4{
+        width: 80px;
+        height: 80px;
+    }
+    #main {
+        width:70vw;
+    }
+    .search {
+        width:70vw;
+    }
 }

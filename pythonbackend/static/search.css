@@ -23,11 +23,18 @@ body {
     background-color: #ffdbbd;
     border: 5px solid gray;
     border-radius: 30px;
-    font-family: caviar;
     flex: 1 0;
     -webkit-flex: 1 0;
     margin: 20px;
 }
-h1{
-    font-size: 14px;
+.info div.com{
+    background-color: #fdcda5;
+}
+.info p{
+    margin: 10px;
+    font-family: corbert;
+    font-size: 28px;
+}
+.info em{
+
 }
