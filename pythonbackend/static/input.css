@@ -25,13 +25,14 @@ body {
 }
 
 .first-sec {
-    background-color: rgba(219, 190, 190, 0.555);
+    background-color:lightgrey;
     width: 900px;
     height: 400px;
     position: absolute;
     top: 20%;
     left: 20%;
-    border-radius:8px;
+    border: 3px solid white;
+    border-radius:12px;
 }
 
 .search {
@@ -46,4 +47,10 @@ body {
     font-weight:900;
     border: none; 
     font-family: caviar;
+    transition-duration: 0.5s;
+}
+
+.search:hover{
+    background-color: rgb(252, 145, 73);
+    color: white;
 }

@@ -4,19 +4,18 @@
     </style> 
     <head>
         <title></title>
-        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='input.css')}}">
+        <link rel="stylesheet" type="text/css" href="/static/input.css">
     </head>
 
     <body>
-    
+        <img src="/static/elems/websiteName.png" width="300" height="70" style="position: absolute; left: 80%; top:4%; ">
         <div class="first-sec">
-            <img src="/static/elems/logo.PNG" width="525" height="140" style="position: absolute; left: 20%; top:23%; ">
+            <img src="/static/elems/logo.PNG" width="550" height="140" style="position: absolute; left: 20%; top:23%; ">
             <form class= "options" method="POST" action="/search">
                 <input id="main" type="text" name='link' placeholder="Enter a reddit post by URL...">       
                 <button class="search" type="sumbit"> 
                      &#128270; Validdit!
                 </button>
-                
             </form>
             </div>
         </div>
